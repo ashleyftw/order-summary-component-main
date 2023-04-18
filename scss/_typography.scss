@@ -1,0 +1,30 @@
+//google font
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+//font-family
+$ff: 'Red Hat Display', sans-serif;
+
+//font-size
+$fs: (
+    base: 16px,
+    sm: 1.175rem,
+    md: 1.5rem,
+    lg: 1.75rem,
+    xl: 2rem,
+    xxl: 2.5rem
+);
+
+//font-weight
+$fw: (
+    base: 500,
+    bold: 700,
+    ex-bold: 900
+);
+
+:root {
+    @each $key, $val in $fs {
+        --fs-#{$key}: #{$val};
+    }
+    @each $key, $val in $fw {
+        --fw-#{$key}: #{$val};
+    }
+}

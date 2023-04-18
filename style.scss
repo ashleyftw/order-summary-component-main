@@ -1,0 +1,106 @@
+@use 'scss/reset' as *;
+@use 'scss/colors' as *;
+@use 'scss/typography' as *;
+@use 'scss/spacer' as *;
+
+body {
+    font-family: $ff;
+    font-weight: var(--fw-base);
+    color: var(--neutral-desat-bl);
+    background-color: var(--primary-p-bl);
+    display: grid;
+    place-content: center;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 500px) {
+        background: norepeat url(images/pattern-background-mobile.svg);
+    }
+}
+
+.card-container {
+    background-color: white;
+    max-width: 25rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: var(--mar-lg) var(--mar-xxl);
+    text-align: center;
+    h1 {
+        color: var(--neutral-dk-bl);
+        font-size: var(--fs-lg);
+        font-weight: var(--fw-ex-bold);
+        margin-bottom: var(--mar-md);
+    }
+    p {
+        font-size: var(--fs-sm);
+    }
+
+}
+
+.card-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    align-items: center;
+    background-color: var(--neutral-v-p-bl);
+    padding: var(--pad-base);
+    border-radius: 1rem;
+    margin: var(--mar-xl) 0;
+
+    img {
+        width: 4rem;
+    }
+
+    .card-plan {
+        display: flex;
+        flex-direction: column;
+        .plan-name {
+            color: var(--neutral-dk-bl);
+            font-weight: var(--fw-ex-bold);
+            font-size: var(--fs-base);
+        }
+        .plan-price {
+            font-size: var(--fs-base);
+        }
+    }
+
+    a {
+        font-weight: var(--fw-bold);
+        margin-left: var(--mar-xl);
+    }
+}
+
+button {
+    padding: var(--pad-base) var(--pad-xl);
+    border-style: none;
+    font-weight: var(--fw-ex-bold);
+    font-size: var(--fs-sm);
+}
+
+.card-btn {
+    background-color: var(--primary-b-bl);
+    color: white;
+    border-radius: 1rem;
+}
+
+.card-cancel {
+    background-color: transparent;
+    color: var(--neutral-desat-bl);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

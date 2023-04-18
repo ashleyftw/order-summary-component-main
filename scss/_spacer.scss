@@ -1,0 +1,28 @@
+//margin
+$mar: (
+    base: 1rem,
+    sm: 1.25rem,
+    md: 1.5rem,
+    lg: 1.75rem,
+    xl: 2rem,
+    xxl: 2.5rem
+);
+
+//padding
+$pad: (
+    base: 1rem,
+    sm: 1.25rem,
+    md: 1.5rem,
+    lg: 1.75rem,
+    xl: 2rem,
+    xxl: 2.5rem
+);
+
+:root {
+    @each $key, $val in $mar {
+        --mar-#{$key}: #{$val};
+    }
+    @each $key, $val in $pad {
+        --pad-#{$key}: #{$val};
+    }
+}
